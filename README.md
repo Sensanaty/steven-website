@@ -1,6 +1,8 @@
 # Steven de Graaf's Portfolio
 
-This is the personal portfolio website of Steven de Graaf. You can view the live site at [REPLACE_WITH_URL]
+This is the personal portfolio website of Steven de Graaf. You can view the live site at [REPLACE_WITH_URL].
+
+See current Prototype version on [Figma](https://www.figma.com/file/UltAB8QCPpig4RPXhLKA30/Steven-s-Website).
 
 ## Stack
 
