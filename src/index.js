@@ -1,2 +1,3 @@
 // Imports
-import './styles/index.scss'
+import './styles/normalize.css';
+import './styles/index.scss';
