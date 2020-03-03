@@ -7,7 +7,7 @@ module.exports = {
     entry: [paths.src + '/index.js'],
     output: {
         path: paths.build,
-        filename: '[name].bundle.js',
+        filename: 'main.bundle.js',
         publicPath: '/',
     },
     plugins: [
@@ -20,10 +20,10 @@ module.exports = {
             },
         ]),
         new HtmlWebpackPlugin({
-            title: 'Index',
+            title: 'Index Page',
             favicon: paths.src + '/images/favicon.png',
-            template: paths.src + '/template.html', // template file
-            filename: 'index.html', // output file
+            template: paths.src + '/pages/index.html',
+            filename: 'index.html',
         }),
     ],
     module: {
