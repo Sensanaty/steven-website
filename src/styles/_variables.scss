@@ -1,1 +1,4 @@
-// Placeholder
+@import "mixins";
+@include font('RobotoMono', '../fonts/RobotoMono')
+
+$font: RobotoMono, sans-serif;
