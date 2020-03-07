@@ -3,4 +3,11 @@
 
 * {
     font-family: $font;
+    transition: all 0.1s;
 }
+
+html, body {
+    height: 100%;
+}
+
+@import 'pages/index';
