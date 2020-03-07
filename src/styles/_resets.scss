@@ -1,0 +1,13 @@
+// This file is used to overwrite default browser behaviours where 'normalize.css' doesn't do so
+
+// Remove header and paragraph spacings
+h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+// Remove list item styles
+li { list-style: none }
+
+// Remove link stylings
+a { color: black }

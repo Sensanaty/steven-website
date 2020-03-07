@@ -1,2 +1,6 @@
 // Imports
-import './styles/index.scss'
+import './styles/normalize.css';
+import './styles/index.scss';
+import './images/linkedin-icon.svg';
+import './images/email-icon.svg';
+import './images/phone-icon.svg';
