@@ -20,10 +20,34 @@ module.exports = {
             },
         ]),
         new HtmlWebpackPlugin({
-            title: 'Index',
+            title: 'Index Page',
             favicon: paths.src + '/images/favicon.png',
-            template: paths.src + '/template.html', // template file
-            filename: 'index.html', // output file
+            template: paths.src + '/pages/index.html',
+            filename: 'index.html',
+        }),
+        new HtmlWebpackPlugin({
+            title: 'About Page',
+            favicon: paths.src + '/images/favicon.png',
+            template: paths.src + '/pages/about.html',
+            filename: 'about.html'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Sales Page',
+            favicon: paths.src + '/images/favicon.png',
+            template: paths.src + '/pages/sales.html',
+            filename: 'sales.html'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Cooperation Page',
+            favicon: paths.src + '/images/favicon.png',
+            template: paths.src + '/pages/cooperation.html',
+            filename: 'cooperation.html'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Extras Page',
+            favicon: paths.src + '/images/favicon.png',
+            template: paths.src + '/pages/extras.html',
+            filename: 'extras.html'
         }),
     ],
     module: {

@@ -1,0 +1,55 @@
+<head>
+    <%= require('html-loader!./_page-partial.html') %>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+
+<body>
+
+<div id="index--body-wrapper">
+    <header>
+        <!-- TODO: See whether Steven has a logo in mind or not to add here -->
+        <div id="header-logo" onclick="window.location.href='/'">
+            <h1>SdG</h1>
+        </div>
+
+        <nav id="header-nav-contact-list">
+            <ul>
+                <!-- To change the color of the SVG, check out Issue #10 on the Github Repo -->
+                <li class="list-item"><a href="tel:+31645048407">
+                    <object class="list-item-icon" data="./images/phone-icon.svg" type="image/svg+xml"></object>06 450 48 407
+                </a></li>
+                <li class="list-item"><a href="mailto:graafdesteven@outlook.com">
+                    <object class="list-item-icon" data="./images/email-icon.svg" type="image/svg+xml" id="email-icon"></object>GraafdeSteven@outlook.com
+                </a></li>
+                <li class="list-item"><a href="https://www.linkedin.com/in/steven-de-graaf-a4486b128/" target="_blank">
+                    <object class="list-item-icon" data="./images/linkedin-icon.svg" type="image/svg+xml"></object>Steven de Graaf
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="body-content">
+        <div class="body-navlink" id="about" onclick="window.location.href='about.html'">
+            <span class="navlink-text">
+                About
+            </span>
+        </div>
+        <div class="body-navlink" id="sales" onclick="window.location.href='sales.html'">
+            <span class="navlink-text">
+                Sales
+            </span>
+        </div>
+        <div class="body-navlink" id="cooperations" onclick="window.location.href='cooperation.html'">
+            <span class="navlink-text">
+                Co-ops
+            </span>
+        </div>
+        <div class="body-navlink" id="extras" onclick="window.location.href='extras.html'">
+            <span class="navlink-text">
+                Extras
+            </span>
+        </div>
+    </div>
+</div>
+
+</body>

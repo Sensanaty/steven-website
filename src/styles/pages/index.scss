@@ -1,0 +1,98 @@
+#index--body-wrapper {
+    height: 100%;
+    display: grid;
+    grid-template: 1fr 6fr / 1fr;
+}
+
+header {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    background: $white;
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(145,145,145,1);
+    -moz-box-shadow: 0px 5px 10px 0px rgba(145,145,145,1);
+    box-shadow: 0px 5px 10px 0px rgba(145,145,145,1);
+}
+
+#header-logo {
+    cursor: pointer;
+    margin: 15px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    background: $red;
+    color: $light-gray;
+}
+
+#header-nav-contact-list {
+    justify-self: flex-end;
+    align-items: center;
+    margin: 15px 25px;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    margin: 3%;
+}
+
+a {
+    text-decoration: underline $black;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+object {
+    padding-right: 10px;
+}
+
+#body-content {
+    display: grid;
+    grid-template: repeat(5, 1fr) / repeat(9, 1fr);
+    grid-template-areas:
+        ".   .   .   .   .      .      .   .    ."
+        ".   .   .   .   .      .      . extras ."
+        ".   .   .   .   . cooperation . extras ."
+        ".   .   . sales . cooperation . extras ."
+        ". about . sales . cooperation . extras .";
+}
+
+.body-navlink {
+    cursor: pointer;
+    background: $blue;
+    color: $white;
+    font-size: calc(16px + 1vmin);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 0px 0px 15px 3px rgba(145,145,145,1);
+    -moz-box-shadow: 0px 0px 15px 3px rgba(145,145,145,1);
+    box-shadow: 0px 0px 15px 3px rgba(145,145,145,1);
+}
+
+#about {
+    grid-area: about;
+}
+
+#sales {
+    grid-area: sales;
+}
+
+#cooperations {
+    grid-area: cooperation;
+}
+
+#extras {
+    grid-area: extras;
+}
+
