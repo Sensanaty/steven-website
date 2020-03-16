@@ -1,7 +1,7 @@
 @import "mixins";
-@include font('RobotoMono', '../fonts/RobotoMono')
+@include font('Baloo', '../fonts/BalooChettan')
 
-$font: RobotoMono, sans-serif;
+$font: Baloo, sans-serif;
 $light-gray: #D3D4D9;
 $red: #BB0A21;
 $black: #252627;
