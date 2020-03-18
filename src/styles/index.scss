@@ -3,11 +3,12 @@
 
 * {
     font-family: $font;
-    transition: all 0.2s;
+    transition: all 0.1s;
 }
 
 html, body {
     height: 100%;
+    background: $green;
 }
 
 @import 'pages/index';
