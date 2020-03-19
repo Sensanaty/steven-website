@@ -59,16 +59,15 @@
     }
 }
 
-// Start of body-content
+// Start of body-content div
 
 #body-content {
     padding: 2% 0 0 3%;
     display: grid;
-    grid-template: 1fr / 1.5fr 1fr;
-    grid-gap: 0 2%;
+    grid-template: 90% / 1fr 1fr;
     grid-template-areas:
         "bio graph"
-        ". graph";
+        " .  graph";
 }
 
 #body-content--about {
@@ -76,9 +75,7 @@
     border-radius: 15px;
     padding: 20px;
     grid-area: bio;
-    height: 60%;
-    //justify-self: center;
-    //align-self: center;
+    //height: 60%;
     display: grid;
     grid-template: 300px 1fr / 1fr 4fr;
     grid-template-areas:
@@ -89,18 +86,39 @@
     -webkit-box-shadow: inset 0 0 4px 0 #000000;
     -moz-box-shadow: inset 0 0 4px 0 #000000;
     box-shadow: inset 0 0 4px 0 #000000;
+
     .content-mugshot-container {
         grid-area: mugshot;
+        padding: 5% 5% 0 15%;
         img {
             padding: 0;
             margin: 0;
             height: 300px;
             border-radius: 10px;
+            -webkit-box-shadow: 0 0 3px 0 #2f2f2f;
+            -moz-box-shadow: 0 0 3px 0 #2f2f2f;
+            box-shadow: 0 0 3px 0 #2f2f2f;
         }
     }
-    .content-text { grid-area: head-and-subheader }
+
+    .content-text {
+        grid-area: head-and-subheader;
+        margin-left: 2%;
+        h1 {
+            font-size: calc(30px + 1vmin);
+            padding-bottom: 3%;
+        }
+
+        h2 {
+            padding-right: 3%;
+            font-size: calc(18px + 1vmin);
+        }
+    }
+
     p {
         grid-area: flavor;
+        font-size: calc(14px + 1vmin);
+        padding: 0 4%;
     }
 }
 
@@ -110,13 +128,13 @@
     display: grid;
     grid-template: repeat(7, 1fr) / repeat(5, 1fr);
     grid-template-areas:
-            ". . . about about"
+            ". . . . about"
             ". . . . ."
-            ". . coops coops coops"
+            ". . . coops coops"
             ". . . . ."
-            ". sales sales sales sales"
+            ". . sales sales sales"
             ". . . . ."
-            "extra extra extra extra extra";
+            ". extra extra extra extra";
 
     #about-box { grid-area: about }
     #coops-box { grid-area: coops }
@@ -134,7 +152,7 @@
 
     a {
         font-size: calc(15px + 1vmin);
-        color: $black;
+        color: #fdfdfd;
     }
 
     &:hover {
