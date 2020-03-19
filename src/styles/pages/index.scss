@@ -1,98 +1,164 @@
-#index--body-wrapper {
+#body-wrapper {
     height: 100%;
     display: grid;
     grid-template: 1fr 6fr / 1fr;
 }
 
-header {
+#body-header {
+    padding: 0 3%;
     display: grid;
-    grid-template: 1fr / 1fr 1fr;
-    background: $white;
-    -webkit-box-shadow: 0px 5px 10px 0px rgba(145,145,145,1);
-    -moz-box-shadow: 0px 5px 10px 0px rgba(145,145,145,1);
-    box-shadow: 0px 5px 10px 0px rgba(145,145,145,1);
+    grid-template: 1fr/ 1fr 1fr;
+    align-items: center;
+    background: $light-green;
+    -webkit-box-shadow: 0 0 3px 0 #2f2f2f;
+    -moz-box-shadow: 0 0 3px 0 #2f2f2f;
+    box-shadow: 0 0 3px 0 #2f2f2f;
+
+    #body-header--tagline {
+        display: flex;
+        flex: 2 1 auto;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    #body-header--navlinks {
+        justify-self: right;
+    }
 }
 
 #header-logo {
     cursor: pointer;
-    margin: 15px 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
-    background: $red;
-    color: $light-gray;
+    margin: 0 3% 0 0;
 }
 
-#header-nav-contact-list {
-    justify-self: flex-end;
-    align-items: center;
-    margin: 15px 25px;
+#header-text {
+    font-size: calc(23px + 1vmin);
+    padding-bottom: 1%;
 }
 
-.list-item {
-    display: flex;
-    align-items: center;
-    margin: 3%;
-}
+.navlink-item {
+    a {
+        color: $black;
+        display: flex; // Necessary to make the icons and the text line up properly
+        align-items: center;
+        text-decoration: $black underline;
 
-a {
-    text-decoration: underline $black;
-    &:hover {
-        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+        }
+
+        img {
+            margin: 2%;
+        }
+    }
+
+    .navlink-link {
+        font-size: calc(10px + 1vmin);
     }
 }
 
-li a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-object {
-    padding-right: 10px;
-}
+// Start of body-content div
 
 #body-content {
+    padding: 2% 0 0 3%;
     display: grid;
-    grid-template: repeat(5, 1fr) / repeat(9, 1fr);
+    grid-template: 90% / 1fr 1fr;
     grid-template-areas:
-        ".   .   .   .   .      .      .   .    ."
-        ".   .   .   .   .      .      . extras ."
-        ".   .   .   .   . cooperation . extras ."
-        ".   .   . sales . cooperation . extras ."
-        ". about . sales . cooperation . extras .";
+        "bio graph"
+        " .  graph";
 }
 
-.body-navlink {
+#body-content--about {
+    background: $light-green;
+    border-radius: 15px;
+    padding: 20px;
+    grid-area: bio;
+    //height: 60%;
+    display: grid;
+    grid-template: 300px 1fr / 1fr 4fr;
+    grid-template-areas:
+            "mugshot head-and-subheader"
+            "flavor flavor";
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: inset 0 0 4px 0 #000000;
+    -moz-box-shadow: inset 0 0 4px 0 #000000;
+    box-shadow: inset 0 0 4px 0 #000000;
+
+    .content-mugshot-container {
+        grid-area: mugshot;
+        padding: 5% 5% 0 15%;
+        img {
+            padding: 0;
+            margin: 0;
+            height: 300px;
+            border-radius: 10px;
+            -webkit-box-shadow: 0 0 3px 0 #2f2f2f;
+            -moz-box-shadow: 0 0 3px 0 #2f2f2f;
+            box-shadow: 0 0 3px 0 #2f2f2f;
+        }
+    }
+
+    .content-text {
+        grid-area: head-and-subheader;
+        margin-left: 2%;
+        h1 {
+            font-size: calc(30px + 1vmin);
+            padding-bottom: 3%;
+        }
+
+        h2 {
+            padding-right: 3%;
+            font-size: calc(18px + 1vmin);
+        }
+    }
+
+    p {
+        grid-area: flavor;
+        font-size: calc(14px + 1vmin);
+        padding: 0 4%;
+    }
+}
+
+#body-content--navigation {
+    grid-area: graph;
+    height: 90%;
+    display: grid;
+    grid-template: repeat(7, 1fr) / repeat(5, 1fr);
+    grid-template-areas:
+            ". . . . about"
+            ". . . . ."
+            ". . . coops coops"
+            ". . . . ."
+            ". . sales sales sales"
+            ". . . . ."
+            ". extra extra extra extra";
+
+    #about-box { grid-area: about }
+    #coops-box { grid-area: coops }
+    #sales-box { grid-area: sales }
+    #extra-box { grid-area: extra }
+    .content-navbox { background: $orange }
+}
+
+.content-navbox {
     cursor: pointer;
-    background: $blue;
-    color: $white;
-    font-size: calc(16px + 1vmin);
     display: flex;
     justify-content: center;
     align-items: center;
-    -webkit-box-shadow: 0px 0px 15px 3px rgba(145,145,145,1);
-    -moz-box-shadow: 0px 0px 15px 3px rgba(145,145,145,1);
-    box-shadow: 0px 0px 15px 3px rgba(145,145,145,1);
-}
+    box-shadow: -2px 0px 3px 1px rgba(0,0,0,1);
 
-#about {
-    grid-area: about;
-}
+    a {
+        font-size: calc(15px + 1vmin);
+        color: #fdfdfd;
+    }
 
-#sales {
-    grid-area: sales;
+    &:hover {
+        box-shadow: -2px 0px 3px 2px rgba(0,0,0,1);
+        a {
+            font-size: calc(16px + 1vmin);
+        }
+    }
 }
-
-#cooperations {
-    grid-area: cooperation;
-}
-
-#extras {
-    grid-area: extras;
-}
-

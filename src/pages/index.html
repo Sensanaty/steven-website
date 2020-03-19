@@ -1,3 +1,6 @@
+<!doctype html>
+<html lang="en">
+
 <head>
     <%= require('html-loader!./_page-partial.html') %>
     <title><%= htmlWebpackPlugin.options.title %></title>
@@ -5,51 +8,56 @@
 
 <body>
 
-<div id="index--body-wrapper">
-    <header>
-        <!-- TODO: See whether Steven has a logo in mind or not to add here -->
-        <div id="header-logo" onclick="window.location.href='/'">
-            <h1>SdG</h1>
+<div id="body-wrapper">
+
+    <header id="body-header">
+        <!-- Header containing the logo, Steven's title & social navlinks -->
+        <div id="body-header--tagline">
+            <img id="header-logo" src="./images/logo.svg" height='100px' aria-hidden="true" alt="Steven Graaf Logo" onclick="window.location.href = '/'">
+            <div id="header-text">Professional Sales Manager</div>
         </div>
 
-        <nav id="header-nav-contact-list">
+        <div id="body-header--navlinks">
             <ul>
-                <!-- To change the color of the SVG, check out Issue #10 on the Github Repo -->
-                <li class="list-item"><a href="tel:+31645048407">
-                    <object class="list-item-icon" data="./images/phone-icon.svg" type="image/svg+xml"></object>06 450 48 407
-                </a></li>
-                <li class="list-item"><a href="mailto:graafdesteven@outlook.com">
-                    <object class="list-item-icon" data="./images/email-icon.svg" type="image/svg+xml" id="email-icon"></object>GraafdeSteven@outlook.com
-                </a></li>
-                <li class="list-item"><a href="https://www.linkedin.com/in/steven-de-graaf-a4486b128/" target="_blank">
-                    <object class="list-item-icon" data="./images/linkedin-icon.svg" type="image/svg+xml"></object>Steven de Graaf
-                </a></li>
+                <li class="navlink-item">
+                    <a class="navlink-link" href="tel:+31645048407">
+                        <img src="./images/phone-icon.svg" alt="Phone Icon" aria-hidden="true">+316 450 48 407
+                    </a>
+                </li>
+                <li class="navlink-item">
+                    <a class="navlink-link" href="mailto:graafdesteven@outlook.com" target="_blank">
+                        <img src="./images/email-icon.svg" alt="Email Icon" aria-hidden="true">GraafdeSteven@outlook.com
+                    </a>
+                </li>
+                <li class="navlink-item">
+                    <a class="navlink-link" href="https://linkedin.com/in/steven-de-graaf-a4486b128/" target="_blank">
+                        <img src="./images/linkedin-icon.svg" alt="Linkedin Icon" aria-hidden="true">Steven de Graaf
+                    </a>
+                </li>
             </ul>
-        </nav>
+        </div>
     </header>
 
     <div id="body-content">
-        <div class="body-navlink" id="about" onclick="window.location.href='about.html'">
-            <span class="navlink-text">
-                About
-            </span>
+        <!-- A very brief bio of Steven's, what he does, etc. -->
+        <div id="body-content--about">
+            <div class="content-mugshot-container">
+                <img class="content-mugshot" src="./images/mugshot.jpg" alt="An Image of Steven" aria-hidden="true">
+            </div>
+            <div class="content-text">
+                <h1>Hoi, ik ben Steven</h1>
+                <h2>Afhakken van een Os, en hoe men daar mede handeldt, en hoe men de stukken best gebruikt</h2>
+            </div>
+            <p>Ik ben makelaar in koffi, en woon op de Lauriergracht No 37. Het is mijn gewoonte niet, romans te schrijven, of zulke dingen, en het heeft dan ook lang geduurd, voor ik er toe overging een paar riem papier extra te bestellen, en het werk aan te vangen, dat gij, lieve lezer, zoâven in de hand hebt genomen, en dat ge lezen moet als ge makelaar in koffie zijt, of als ge wat anders zijt. Niet alleen dat ik nooit iets schreef wat naar een roman geleek, maar ik houd er zelfs niet van, iets dergelijks te lezen, omdat ik een man van zaken ben. Sedert jaren vraag ik mij af, waartoe zulke dingen dienen, en ik sta verbaasd over de onbeschaamdheid</p>
         </div>
-        <div class="body-navlink" id="sales" onclick="window.location.href='sales.html'">
-            <span class="navlink-text">
-                Sales
-            </span>
-        </div>
-        <div class="body-navlink" id="cooperations" onclick="window.location.href='cooperation.html'">
-            <span class="navlink-text">
-                Co-ops
-            </span>
-        </div>
-        <div class="body-navlink" id="extras" onclick="window.location.href='extras.html'">
-            <span class="navlink-text">
-                Extras
-            </span>
+        <div id="body-content--navigation">
+            <div id="about-box" class="content-navbox" onclick="window.location.href='./about.html'"><a href="./about.html" class="content-navlink"><p>About</p></a></div>
+            <div id="coops-box" class="content-navbox" onclick="window.location.href='./cooperation.html'"><a href="./cooperation.html" class="content-navlink"><p>Coops</p></a></div>
+            <div id="sales-box" class="content-navbox" onclick="window.location.href='./sales.html'"><a href="./sales.html" class="content-navlink"><p>Sales</p></a></div>
+            <div id="extra-box" class="content-navbox" onclick="window.location.href='./extras.html'"><a href="./extras.html" class="content-navlink"><p>Extras</p></a></div>
         </div>
     </div>
 </div>
 
 </body>
+</html>
