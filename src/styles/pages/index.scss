@@ -55,28 +55,37 @@
 // Start of body-content div
 
 #body-content {
-    padding: 2% 0 0 3%;
+    height: 100%;
+    display: flex;
+}
+
+#body-content-wrapper {
+    height: 100%;
     display: grid;
-    grid-template: 90% / 1fr 1fr;
+    grid-template: 0.5fr 1fr / 1.5fr 2fr;
     grid-template-areas:
-        "bio graph"
-        " .  graph";
+        "about rightside"
+        "underside rightside";
+
+    #body-content--about { grid-area: about }
+    #body-content--underside { grid-area: underside }
+    #body-content--rightside { grid-area: rightside }
 }
 
 // Grid Area declarations
 
 // About
+
 #body-content--about {
+    margin: 3% 0 0 3%;
     background: $light-green;
     border-radius: 15px;
     padding: 20px;
     grid-area: bio;
-    //height: 60%;
     display: grid;
-    grid-template: 300px 1fr / 1fr 4fr;
+    grid-template: 0.25fr / 1fr 3fr;
     grid-template-areas:
-            "mugshot head-and-subheader"
-            "flavor flavor";
+            "mugshot head-and-subheader";
     justify-content: center;
     align-items: center;
     box-shadow: inset 0 0 4px 0 #000000;
@@ -108,29 +117,37 @@
     }
 }
 
-    p {
-        grid-area: flavor;
-        font-size: calc(14px + 1vmin);
-        padding: 0 4%;
-    }
-}
+// Navlinks
 
-#body-content--navigation {
-    grid-area: graph;
-    height: 90%;
+#body-content--underside {
     display: grid;
-    grid-template: repeat(7, 1fr) / repeat(5, 1fr);
+    grid-template: repeat(5, 1fr) / repeat(4, 1fr);
     grid-template-areas:
-            ". . . . about"
-            ". . . . ."
-            ". . . coops coops"
-            ". . . . ."
-            ". . sales sales sales"
-            ". . . . ."
-            ". extra extra extra extra";
+        ".   .   .   .  "
+        ".   .   . coops"
+        ". about . coops"
+        ". about . coops"
+        ". about . coops";
 
     #about-box { grid-area: about }
     #coops-box { grid-area: coops }
+}
+
+#body-content--rightside {
+    display: grid;
+    grid-template: repeat(10, 1fr) / repeat(5, 1fr);
+    grid-template-areas:
+        ".   .   .   .   ."
+        ".   .   . extra ."
+        ". sales . extra ."
+        ". sales . extra ."
+        ". sales . extra ."
+        ". sales . extra ."
+        ". sales . extra ."
+        ". sales . extra ."
+        ". sales . extra ."
+        ". sales . extra .";
+
     #sales-box { grid-area: sales }
     #extra-box { grid-area: extra }
 }
@@ -141,7 +158,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: -2px 0px 3px 1px rgba(0,0,0,1);
+    box-shadow: 0 0 3px 1px rgba(0,0,0,1);
 
     a {
         font-size: calc(15px + 1vmin);
@@ -149,7 +166,7 @@
     }
 
     &:hover {
-        box-shadow: -2px 0px 3px 2px rgba(0,0,0,1);
+        box-shadow: 0 0 3px 2px rgba(0,0,0,1);
         a {
             font-size: calc(16px + 1vmin);
         }
