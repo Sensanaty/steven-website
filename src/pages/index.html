@@ -37,17 +37,21 @@
     </header>
 
     <div id="body-content">
-        <!-- A very brief bio of Steven's, what he does, etc. -->
-        <div id="body-content--about">
-            <div class="content-mugshot-container">
-                <img class="content-mugshot" src="./images/mugshot.jpg" alt="An Image of Steven" aria-hidden="true">
-            </div>
+        <div id="body-content-wrapper">
+            <div id="body-content--about">
+                <div class="content-mugshot-container">
+                    <picture class="content-mugshot">
+                        <source srcset="./images/person.webp" type="image/webp">
+                        <source srcset="./images/person.jpg" type="image/jpeg">
+                        <img src="./images/person.jpg" alt="Photo of Steven">
+                    </picture>
+                </div>
             <div class="content-text">
                 <h1>Hoi, ik ben Steven</h1>
                 <h2>Afhakken van een Os, en hoe men daar mede handeldt, en hoe men de stukken best gebruikt</h2>
             </div>
-            <p>Ik ben makelaar in koffi, en woon op de Lauriergracht No 37. Het is mijn gewoonte niet, romans te schrijven, of zulke dingen, en het heeft dan ook lang geduurd, voor ik er toe overging een paar riem papier extra te bestellen, en het werk aan te vangen, dat gij, lieve lezer, zoâven in de hand hebt genomen, en dat ge lezen moet als ge makelaar in koffie zijt, of als ge wat anders zijt. Niet alleen dat ik nooit iets schreef wat naar een roman geleek, maar ik houd er zelfs niet van, iets dergelijks te lezen, omdat ik een man van zaken ben. Sedert jaren vraag ik mij af, waartoe zulke dingen dienen, en ik sta verbaasd over de onbeschaamdheid</p>
-        </div>
+            </div>
+            </div>
         <div id="body-content--navigation">
             <div id="about-box" class="content-navbox" onclick="window.location.href='./about.html'"><a href="./about.html" class="content-navlink"><p>About</p></a></div>
             <div id="coops-box" class="content-navbox" onclick="window.location.href='./cooperation.html'"><a href="./cooperation.html" class="content-navlink"><p>Coops</p></a></div>
