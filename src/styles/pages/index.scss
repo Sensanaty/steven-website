@@ -10,8 +10,6 @@
     grid-template: 1fr/ 1fr 1fr;
     align-items: center;
     background: $light-green;
-    -webkit-box-shadow: 0 0 3px 0 #2f2f2f;
-    -moz-box-shadow: 0 0 3px 0 #2f2f2f;
     box-shadow: 0 0 3px 0 #2f2f2f;
 
     #body-header--tagline {
@@ -31,11 +29,6 @@
 #header-logo {
     cursor: pointer;
     margin: 0 3% 0 0;
-}
-
-#header-text {
-    font-size: calc(23px + 1vmin);
-    padding-bottom: 1%;
 }
 
 .navlink-item {
@@ -62,41 +55,49 @@
 // Start of body-content div
 
 #body-content {
-    padding: 2% 0 0 3%;
-    display: grid;
-    grid-template: 90% / 1fr 1fr;
-    grid-template-areas:
-        "bio graph"
-        " .  graph";
+    height: 100%;
+    display: flex;
 }
 
+#body-content-wrapper {
+    height: 100%;
+    display: grid;
+    grid-template: 0.5fr 1fr / 1.5fr 2fr;
+    grid-template-areas:
+        "about rightside"
+        "underside rightside";
+
+    #body-content--about { grid-area: about }
+    #body-content--underside { grid-area: underside }
+    #body-content--rightside { grid-area: rightside }
+}
+
+// Grid Area declarations
+
+// About
+
 #body-content--about {
+    margin: 3% 0 0 3%;
     background: $light-green;
     border-radius: 15px;
     padding: 20px;
     grid-area: bio;
-    //height: 60%;
     display: grid;
-    grid-template: 300px 1fr / 1fr 4fr;
+    grid-template: 0.25fr / 1fr 3fr;
     grid-template-areas:
-            "mugshot head-and-subheader"
-            "flavor flavor";
+            "mugshot head-and-subheader";
     justify-content: center;
     align-items: center;
-    -webkit-box-shadow: inset 0 0 4px 0 #000000;
-    -moz-box-shadow: inset 0 0 4px 0 #000000;
     box-shadow: inset 0 0 4px 0 #000000;
 
     .content-mugshot-container {
         grid-area: mugshot;
-        padding: 5% 5% 0 15%;
+        padding: 5% 5% 0 8%;
         img {
             padding: 0;
             margin: 0;
             height: 300px;
             border-radius: 10px;
-            -webkit-box-shadow: 0 0 3px 0 #2f2f2f;
-            -moz-box-shadow: 0 0 3px 0 #2f2f2f;
             box-shadow: 0 0 3px 0 #2f2f2f;
         }
     }
@@ -114,41 +115,50 @@
             font-size: calc(18px + 1vmin);
         }
     }
-
-    p {
-        grid-area: flavor;
-        font-size: calc(14px + 1vmin);
-        padding: 0 4%;
-    }
 }
 
-#body-content--navigation {
-    grid-area: graph;
-    height: 90%;
+// Navlinks
+
+#body-content--underside {
     display: grid;
-    grid-template: repeat(7, 1fr) / repeat(5, 1fr);
+    grid-template: repeat(5, 1fr) / repeat(4, 1fr);
     grid-template-areas:
-            ". . . . about"
-            ". . . . ."
-            ". . . coops coops"
-            ". . . . ."
-            ". . sales sales sales"
-            ". . . . ."
-            ". extra extra extra extra";
+        ".   .   .   .  "
+        ".   .   . coops"
+        ". about . coops"
+        ". about . coops"
+        ". about . coops";
 
     #about-box { grid-area: about }
     #coops-box { grid-area: coops }
+}
+
+#body-content--rightside {
+    display: grid;
+    grid-template: repeat(10, 1fr) / repeat(5, 1fr);
+    grid-template-areas:
+        ".   .   .   .   ."
+        ".   .   . extra ."
+        ". sales . extra ."
+        ". sales . extra ."
+        ". sales . extra ."
+        ". sales . extra ."
+        ". sales . extra ."
+        ". sales . extra ."
+        ". sales . extra ."
+        ". sales . extra .";
+
     #sales-box { grid-area: sales }
     #extra-box { grid-area: extra }
-    .content-navbox { background: $orange }
 }
 
 .content-navbox {
+    background: $orange;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: -2px 0px 3px 1px rgba(0,0,0,1);
+    box-shadow: 0 0 3px 1px rgba(0,0,0,1);
 
     a {
         font-size: calc(15px + 1vmin);
@@ -156,7 +166,7 @@
     }
 
     &:hover {
-        box-shadow: -2px 0px 3px 2px rgba(0,0,0,1);
+        box-shadow: 0 0 3px 2px rgba(0,0,0,1);
         a {
             font-size: calc(16px + 1vmin);
         }
