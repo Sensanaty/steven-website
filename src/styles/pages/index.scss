@@ -91,22 +91,19 @@
     }
 }
 
-    .content-text {
-        grid-area: head-and-subheader;
-        margin-left: 2%;
-        h1 {
-            font-size: calc(30px + 1vmin);
-            padding-bottom: 3%;
-        }
+.content-text {
+    grid-area: head-and-subheader;
+    margin-left: 2%;
+    h1 {
+        font-size: calc(30px + 1vmin);
+        padding-bottom: 3%;
+    }
 
-        h2 {
-            padding-right: 3%;
-            font-size: calc(18px + 1vmin);
-        }
+    h2 {
+        padding-right: 3%;
+        font-size: calc(18px + 1vmin);
     }
 }
-
-// Navlinks
 
 #body-content--navlinks {
     height: 100%;
