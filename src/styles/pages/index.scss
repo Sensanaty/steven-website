@@ -27,6 +27,7 @@
 }
 
 #header-logo {
+    height: 100px;
     cursor: pointer;
     margin: 0 3% 0 0;
 }
@@ -52,104 +53,78 @@
     }
 }
 
-// Start of body-content div
-
-#body-content {
-    height: 100%;
-    display: flex;
-}
-
 #body-content-wrapper {
     height: 100%;
-    display: grid;
-    grid-template: 0.5fr 1fr / 1.5fr 2fr;
-    grid-template-areas:
-        "about rightside"
-        "underside rightside";
-
-    #body-content--about { grid-area: about }
-    #body-content--underside { grid-area: underside }
-    #body-content--rightside { grid-area: rightside }
 }
 
-// Grid Area declarations
-
-// About
-
 #body-content--about {
-    margin: 3% 0 0 3%;
+    margin-top: 2%;
+    margin-left: 2%;
+    position: absolute;
+    max-width: 40%;
     background: $light-green;
     border-radius: 15px;
     padding: 20px;
     grid-area: bio;
     display: grid;
-    grid-template: 0.25fr / 1fr 3fr;
+    grid-template: 0.4fr / 1fr 3fr;
     grid-template-areas:
             "mugshot head-and-subheader";
     justify-content: center;
     align-items: center;
     box-shadow: inset 0 0 4px 0 #000000;
+}
 
-    .content-mugshot-container {
-        grid-area: mugshot;
-        padding: 5% 5% 0 8%;
-        img {
-            padding: 0;
-            margin: 0;
-            height: 300px;
-            border-radius: 10px;
-            box-shadow: 0 0 3px 0 #2f2f2f;
-        }
+.content-mugshot-container {
+    padding: 5% 5% 0 8%;
+
+    picture {
+        display: block;
     }
 
-    .content-text {
-        grid-area: head-and-subheader;
-        margin-left: 2%;
-        h1 {
-            font-size: calc(30px + 1vmin);
-            padding-bottom: 3%;
-        }
-
-        h2 {
-            padding-right: 3%;
-            font-size: calc(18px + 1vmin);
-        }
+    img {
+        padding: 0;
+        margin: 0;
+        height: 250px;
+        border-radius: 10px;
+        box-shadow: 0 0 3px 0 #2f2f2f;
     }
 }
 
-// Navlinks
+.content-text {
+    grid-area: head-and-subheader;
+    margin-left: 2%;
+    h1 {
+        font-size: calc(30px + 1vmin);
+        padding-bottom: 3%;
+    }
 
-#body-content--underside {
-    display: grid;
-    grid-template: repeat(5, 1fr) / repeat(4, 1fr);
-    grid-template-areas:
-        ".   .   .   .  "
-        ".   .   . coops"
-        ". about . coops"
-        ". about . coops"
-        ". about . coops";
-
-    #about-box { grid-area: about }
-    #coops-box { grid-area: coops }
+    h2 {
+        padding-right: 3%;
+        font-size: calc(18px + 1vmin);
+    }
 }
 
-#body-content--rightside {
+#body-content--navlinks {
+    height: 100%;
     display: grid;
-    grid-template: repeat(10, 1fr) / repeat(5, 1fr);
+    grid-template: repeat(10, 1fr) / repeat(9, 1fr);
     grid-template-areas:
-        ".   .   .   .   ."
-        ".   .   . extra ."
-        ". sales . extra ."
-        ". sales . extra ."
-        ". sales . extra ."
-        ". sales . extra ."
-        ". sales . extra ."
-        ". sales . extra ."
-        ". sales . extra ."
-        ". sales . extra .";
+        ".   .   .   .   .   .   .   .   ."
+        ".   .   .   .   .   .   . extra ."
+        ".   .   .   .   .   .   . extra ."
+        ".   .   .   .   . sales . extra ."
+        ".   .   .   .   . sales . extra ."
+        ".   .   . coops . sales . extra ."
+        ". about . coops . sales . extra ."
+        ". about . coops . sales . extra ."
+        ". about . coops . sales . extra ."
+        ". about . coops . sales . extra .";
 
-    #sales-box { grid-area: sales }
-    #extra-box { grid-area: extra }
+        #about-box { grid-area: about };
+        #coops-box { grid-area: coops };
+        #sales-box { grid-area: sales };
+        #extra-box { grid-area: extra };
 }
 
 .content-navbox {
@@ -172,3 +147,5 @@
         }
     }
 }
+
+@import './media-queries.scss';
