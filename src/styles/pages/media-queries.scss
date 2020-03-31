@@ -1,0 +1,62 @@
+@media screen and (max-width: 1539px) {
+    .content-text h1 { font-size: calc(29px + 1vmin) }
+    .content-text h2 { font-size: calc(17px + 1vmin) }
+}
+
+@media screen and (max-width: 1516px) {
+    .content-text h1 { font-size: calc(28px + 1vmin) }
+    .content-text h2 { font-size: calc(16px + 1vmin) }
+}
+
+@media screen and (max-width: 1478px) {
+    .content-text h1 { font-size: calc(29px + 1vmin) }
+    .content-text h2 { font-size: calc(15px + 1vmin) }
+}
+
+@media screen and (max-width: 1440px) {
+    .content-text h1 { font-size: calc(27px + 1vmin) }
+    .content-text h2 { font-size: calc(14px + 1vmin) }
+    .content-mugshot-container {
+        img {
+            height: 200px;
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .content-text h1 { font-size: calc(26px + 1vmin) }
+    .content-text h2 { font-size: calc(13px + 1vmin) }
+}
+
+// Adjust the size of the link divs on shorter screens so that the spacing between the 'graph' and about div are nice
+@media screen and (max-height: 805px) {
+    #body-content--navlinks {
+        grid-template-areas:
+                ".   .   .   .   .   .   .   .   ."
+                ".   .   .   .   .   .   .   .   ."
+                ".   .   .   .   .   .   . extra ."
+                ".   .   .   .   .   .   . extra ."
+                ".   .   .   .   . sales . extra ."
+                ".   .   .   .   . sales . extra ."
+                ".   .   . coops . sales . extra ."
+                ". about . coops . sales . extra ."
+                ". about . coops . sales . extra ."
+                ". about . coops . sales . extra .";
+    }
+}
+
+@media screen and (max-height: 655px) {
+    #body-content--navlinks {
+        grid-template-areas:
+                ".   .   .   .   .   .   .   .   ."
+                ".   .   .   .   .   .   .   .   ."
+                ".   .   .   .   .   .   .   .   ."
+                ".   .   .   .   .   .   . extra ."
+                ".   .   .   .   .   .   . extra ."
+                ".   .   .   .   . sales . extra ."
+                ".   .   .   .   . sales . extra ."
+                ".   .   . coops . sales . extra ."
+                ". about . coops . sales . extra ."
+                ". about . coops . sales . extra .";
+    }
+}
