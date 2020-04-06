@@ -1,98 +1,96 @@
-#index--body-wrapper {
+#body-content-wrapper {
     height: 100%;
-    display: grid;
-    grid-template: 1fr 6fr / 1fr;
 }
 
-header {
+#body-content--about {
+    margin-top: 2%;
+    margin-left: 2%;
+    position: absolute;
+    max-width: 40%;
+    background: $secondary-highlight;
+    border-radius: 15px;
+    padding: 20px;
+    grid-area: bio;
     display: grid;
-    grid-template: 1fr / 1fr 1fr;
-    background: $white;
-    -webkit-box-shadow: 0px 5px 10px 0px rgba(145,145,145,1);
-    -moz-box-shadow: 0px 5px 10px 0px rgba(145,145,145,1);
-    box-shadow: 0px 5px 10px 0px rgba(145,145,145,1);
-}
-
-#header-logo {
-    cursor: pointer;
-    margin: 15px 25px;
-    display: flex;
+    grid-template: 0.4fr / 1fr 3fr;
+    grid-template-areas:
+            "mugshot head-and-subheader";
     justify-content: center;
     align-items: center;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
-    background: $red;
-    color: $light-gray;
+    box-shadow: inset 0 0 4px 0 #000000;
 }
 
-#header-nav-contact-list {
-    justify-self: flex-end;
-    align-items: center;
-    margin: 15px 25px;
-}
+.content-mugshot-container {
+    padding: 5% 5% 0 8%;
 
-.list-item {
-    display: flex;
-    align-items: center;
-    margin: 3%;
-}
+    picture {
+        display: block;
+    }
 
-a {
-    text-decoration: underline $black;
-    &:hover {
-        text-decoration: none;
+    img {
+        padding: 0;
+        margin: 0;
+        height: 250px;
+        border-radius: 10px;
+        box-shadow: 0 0 3px 0 #2f2f2f;
     }
 }
 
-li a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.content-text {
+    grid-area: head-and-subheader;
+    margin-left: 2%;
+    h1 {
+        font-size: calc(30px + 1vmin);
+        padding-bottom: 3%;
+    }
+
+    h2 {
+        padding-right: 3%;
+        font-size: calc(18px + 1vmin);
+    }
 }
 
-object {
-    padding-right: 10px;
-}
-
-#body-content {
+#body-content--navlinks {
+    height: 100%;
     display: grid;
-    grid-template: repeat(5, 1fr) / repeat(9, 1fr);
+    grid-template: repeat(10, 1fr) / repeat(9, 1fr);
     grid-template-areas:
-        ".   .   .   .   .      .      .   .    ."
-        ".   .   .   .   .      .      . extras ."
-        ".   .   .   .   . cooperation . extras ."
-        ".   .   . sales . cooperation . extras ."
-        ". about . sales . cooperation . extras .";
+        ".   .   .   .   .   .   .   .   ."
+        ".   .   .   .   .   .   . extra ."
+        ".   .   .   .   .   .   . extra ."
+        ".   .   .   .   . sales . extra ."
+        ".   .   .   .   . sales . extra ."
+        ".   .   . coops . sales . extra ."
+        ". about . coops . sales . extra ."
+        ". about . coops . sales . extra ."
+        ". about . coops . sales . extra ."
+        ". about . coops . sales . extra .";
+
+        #about-box { grid-area: about };
+        #coops-box { grid-area: coops };
+        #sales-box { grid-area: sales };
+        #extra-box { grid-area: extra };
 }
 
-.body-navlink {
+.content-navbox {
+    background: $background-highlight;
     cursor: pointer;
-    background: $blue;
-    color: $white;
-    font-size: calc(16px + 1vmin);
     display: flex;
     justify-content: center;
     align-items: center;
-    -webkit-box-shadow: 0px 0px 15px 3px rgba(145,145,145,1);
-    -moz-box-shadow: 0px 0px 15px 3px rgba(145,145,145,1);
-    box-shadow: 0px 0px 15px 3px rgba(145,145,145,1);
+    box-shadow: 0 0 3px 1px rgba(0,0,0,1);
+
+    a {
+        font-size: calc(15px + 1vmin);
+        color: #fdfdfd;
+    }
+
+    &:hover {
+        box-shadow: 0 0 3px 2px rgba(0,0,0,1);
+        a {
+            font-size: calc(16px + 1vmin);
+        }
+    }
 }
 
-#about {
-    grid-area: about;
-}
-
-#sales {
-    grid-area: sales;
-}
-
-#cooperations {
-    grid-area: cooperation;
-}
-
-#extras {
-    grid-area: extras;
-}
-
+@import './media-queries.scss';

@@ -1,3 +1,4 @@
+@import './normalize.css';
 // This file is used to overwrite default browser behaviours where 'normalize.css' doesn't do so
 
 // Remove header and paragraph spacings
@@ -10,4 +11,4 @@ h1, h2, h3, p, ul, li {
 li { list-style: none }
 
 // Remove link stylings
-a { color: black }
+a { text-decoration: none }
