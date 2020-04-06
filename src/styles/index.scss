@@ -8,7 +8,8 @@
 
 html, body {
     height: 100vh;
-    background: $green;
+    background: $primary-highlight;
 }
 
+@import "header";
 @import 'pages/index';
