@@ -20,31 +20,31 @@ module.exports = {
             },
         ]),
         new HtmlWebpackPlugin({
-            title: 'Index Page',
+            title: 'Steven Graaf',
             favicon: paths.src + '/images/favicon.png',
             template: paths.src + '/pages/index.html',
             filename: 'index.html',
         }),
         new HtmlWebpackPlugin({
-            title: 'About Page',
+            title: 'Steven Graaf - About',
             favicon: paths.src + '/images/favicon.png',
             template: paths.src + '/pages/about.html',
             filename: 'about.html'
         }),
         new HtmlWebpackPlugin({
-            title: 'Sales Page',
+            title: 'Steven Graaf - Sales',
             favicon: paths.src + '/images/favicon.png',
             template: paths.src + '/pages/sales.html',
             filename: 'sales.html'
         }),
         new HtmlWebpackPlugin({
-            title: 'Cooperation Page',
+            title: 'Steven Graaf - Cooperations',
             favicon: paths.src + '/images/favicon.png',
             template: paths.src + '/pages/cooperation.html',
             filename: 'cooperation.html'
         }),
         new HtmlWebpackPlugin({
-            title: 'Extras Page',
+            title: 'Steven Graaf - Extras',
             favicon: paths.src + '/images/favicon.png',
             template: paths.src + '/pages/extras.html',
             filename: 'extras.html'
