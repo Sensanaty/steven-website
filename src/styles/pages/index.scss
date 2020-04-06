@@ -9,7 +9,7 @@
     display: grid;
     grid-template: 1fr/ 1fr 1fr;
     align-items: center;
-    background: $light-green;
+    background: $secondary-highlight;
     box-shadow: 0 0 3px 0 #2f2f2f;
 
     #body-header--tagline {
@@ -34,10 +34,10 @@
 
 .navlink-item {
     a {
-        color: $black;
+        color: $text-color;
         display: flex; // Necessary to make the icons and the text line up properly
         align-items: center;
-        text-decoration: $black underline;
+        text-decoration: $text-color underline;
 
         &:hover {
             text-decoration: none;
@@ -62,7 +62,7 @@
     margin-left: 2%;
     position: absolute;
     max-width: 40%;
-    background: $light-green;
+    background: $secondary-highlight;
     border-radius: 15px;
     padding: 20px;
     grid-area: bio;
@@ -128,7 +128,7 @@
 }
 
 .content-navbox {
-    background: $orange;
+    background: $background-highlight;
     cursor: pointer;
     display: flex;
     justify-content: center;
