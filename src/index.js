@@ -15,15 +15,19 @@ function changeHighlight() {
     const location = window.location.pathname+window.location.search;
     switch (location) {
         case "/about.html":
+        case "/about":
             document.getElementById('about-header-link').classList.add("current-page");
             break;
         case "/cooperation.html":
+        case "/cooperation":
             document.getElementById('coops-header-link').classList.add("current-page");
             break;
         case "/sales.html":
+        case "/sales":
             document.getElementById('sales-header-link').classList.add("current-page");
             break;
         case "/extras.html":
+        case "/extras":
             document.getElementById('extras-header-link').classList.add("current-page");
             break;
         default:
