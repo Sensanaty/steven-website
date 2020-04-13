@@ -8,10 +8,16 @@
 #body-header {
     padding: 1% 3%;
     display: grid;
-    grid-template: 1fr/ 1fr 1fr;
+    grid-template: 1fr/ 0.7fr 1fr 0.7fr;
+    grid-template-areas:
+        "logo navlinks social";
     align-items: center;
     background: $secondary-highlight;
     box-shadow: 0 0 3px 0 #2f2f2f;
+
+    #body-header--social-navlinks { grid-area: social }
+    #header-navigation { grid-area: navlinks }
+    #body-header--text-align { grid-area: logo };
 
     #body-header--tagline {
         display: flex;
@@ -31,6 +37,31 @@
     height: 100px;
     cursor: pointer;
     margin: 0 3% 0 0;
+}
+
+#header-navigation {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+
+    .header-navigation--box {
+        font-size: calc(1vmin + 13px);
+
+    }
+
+    .header-navlink {
+        text-decoration: underline $background-highlight;
+        color: $text-color;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.current-page {
+    color: $background-highlight !important;
+    text-decoration: none !important;
 }
 
 .navlink-item {
