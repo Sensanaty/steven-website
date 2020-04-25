@@ -11,6 +11,10 @@ html, body {
     background: $primary-highlight;
 }
 
+// Page Partials
 @import "header";
+
+// Pages
 @import 'pages/index/index';
 @import 'pages/about/about';
+@import 'pages/coop/coop';
