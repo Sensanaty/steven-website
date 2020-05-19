@@ -8,7 +8,6 @@
     position: absolute;
     max-width: 40%;
     background: $secondary-highlight;
-    border-radius: 15px;
     padding: 20px;
     grid-area: bio;
     display: grid;
@@ -17,7 +16,7 @@
             "mugshot head-and-subheader";
     justify-content: center;
     align-items: center;
-    box-shadow: inset 0 0 4px 0 #000000;
+    box-shadow: inset 0 0 2px 0 #000000;
 }
 
 .content-mugshot-container {
@@ -31,7 +30,7 @@
         padding: 0;
         margin: 0;
         height: 250px;
-        border-radius: 10px;
+        //border-radius: 10px;
         box-shadow: 0 0 3px 0 #2f2f2f;
     }
 }
@@ -40,11 +39,15 @@
     grid-area: head-and-subheader;
     margin-left: 2%;
     h1 {
+        font-weight: normal;
+        color: $text-color;
         font-size: calc(30px + 1vmin);
         padding-bottom: 3%;
     }
 
     h2 {
+        font-weight: normal;
+        color: $text-color;
         padding-right: 3%;
         font-size: calc(18px + 1vmin);
     }
@@ -78,7 +81,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 3px 1px rgba(0,0,0,1);
+    box-shadow: 0 0 0 0.5px rgba(0,0,0,1);
 
     a {
         font-size: calc(15px + 1vmin);
@@ -86,7 +89,7 @@
     }
 
     &:hover {
-        box-shadow: 0 0 3px 2px rgba(0,0,0,1);
+        box-shadow: 0 0 2px 1.5px rgba(0,0,0,1);
         a {
             font-size: calc(16px + 1vmin);
         }
