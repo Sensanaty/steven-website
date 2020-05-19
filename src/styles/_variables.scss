@@ -2,7 +2,10 @@
 @include font('Futura', '../fonts/Futura')
 
 $font: Futura, sans-serif;
-$secondary-highlight: #ffffff;
-$primary-highlight: #b9cbd0;
-$text-color: #464655;
-$background-highlight: #f78764;
+//$secondary-highlight: #fff8f0;
+$secondary-highlight: #fff8f0;
+$primary-highlight: #717171;
+$background-highlight: #e2682a;
+
+$text-color: #2f2f2f;
+$text-color-dark-background: $secondary-highlight;
