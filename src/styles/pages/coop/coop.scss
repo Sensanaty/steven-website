@@ -45,7 +45,6 @@
 
 .company-section:nth-child(odd) {
     grid-template: 0.4fr 1.6fr 0.4fr / 1.7fr 0.3fr;
-    color: $text-color-dark-background;
     grid-template-areas:
             "title title"
             "description video"
