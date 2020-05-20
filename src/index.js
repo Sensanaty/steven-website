@@ -14,20 +14,20 @@ function changeHighlight() {
     // Get the relative URL of the page eg: '/about.html'
     const location = window.location.pathname+window.location.search;
     switch (location) {
-        case "/about.html":
-        case "/about":
+        case "/over_mij.html":
+        case "/over_mij":
             document.getElementById('about-header-link').classList.add("current-page");
             break;
-        case "/cooperation.html":
-        case "/cooperation":
+        case "/projecten.html":
+        case "/projecten":
             document.getElementById('coops-header-link').classList.add("current-page");
             break;
         case "/sales.html":
         case "/sales":
             document.getElementById('sales-header-link').classList.add("current-page");
             break;
-        case "/extras.html":
-        case "/extras":
+        case "/extra.html":
+        case "/extra":
             document.getElementById('extras-header-link').classList.add("current-page");
             break;
         default:

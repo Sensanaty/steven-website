@@ -30,26 +30,30 @@
         padding: 0;
         margin: 0;
         height: 250px;
-        //border-radius: 10px;
         box-shadow: 0 0 3px 0 #2f2f2f;
     }
 }
 
 .content-text {
+    height: 100%;
     grid-area: head-and-subheader;
     margin-left: 2%;
-    h1 {
-        font-weight: normal;
-        color: $text-color;
-        font-size: calc(30px + 1vmin);
-        padding-bottom: 3%;
-    }
+    display: grid;
+    grid-template: 0.3fr 1fr / 1fr;
+    justify-content: center;
+    color: $text-color;
+    font-weight: 600;
 
-    h2 {
-        font-weight: normal;
-        color: $text-color;
-        padding-right: 3%;
-        font-size: calc(18px + 1vmin);
+    h1 {
+        align-self: center;
+        font-weight: 600;
+        font-size: calc(31px + 1vmin);
+        padding-bottom: 7px;
+    }
+    p {
+        padding-top: 15px;
+        font-weight: 500;
+        font-size: calc(12px + 1vmin);
     }
 }
 
