@@ -1,7 +1,7 @@
 @import "mixins";
-@include font('Futura', '../fonts/Futura')
+@include font('Quicksand', '../fonts/Quicksand')
 
-$font: Futura, sans-serif;
+$font: Quicksand, sans-serif;
 $secondary-highlight: #717171;
 $primary-highlight: #fff0f0;
 $background-highlight: #e2682a;
