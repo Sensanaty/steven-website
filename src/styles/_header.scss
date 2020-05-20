@@ -6,7 +6,7 @@
 }
 
 #body-header {
-    padding: 1% 3%;
+    padding: 1rem 3rem;
     display: grid;
     grid-template: 1fr/ 0.7fr 1fr 0.7fr;
     grid-template-areas:
@@ -36,7 +36,7 @@
 #header-logo {
     height: 100px;
     cursor: pointer;
-    margin: 0 3% 0 0;
+    margin: 0 3rem 0 0;
 }
 
 #header-navigation {
@@ -76,7 +76,7 @@
         }
 
         img {
-            margin: 2%;
+            margin: 8px;
         }
     }
 
