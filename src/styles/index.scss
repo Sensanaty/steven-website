@@ -12,6 +12,8 @@ html, body {
     background: $primary-highlight;
 }
 
+body { overflow-y: scroll }
+
 // Page Partials
 @import "header";
 
