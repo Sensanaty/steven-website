@@ -53,6 +53,10 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.xml$/i,
+                use: 'raw-loader',
+            },
+            {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: ['babel-loader', 'eslint-loader'],
