@@ -21,31 +21,26 @@ module.exports = {
         ]),
         new HtmlWebpackPlugin({
             title: 'Steven de Graaf',
-            favicon: paths.src + '/images/favicon.png',
             template: paths.src + '/pages/index.html',
             filename: 'index.html',
         }),
         new HtmlWebpackPlugin({
             title: 'SdG - Over Mij',
-            favicon: paths.src + '/images/favicon.png',
             template: paths.src + '/pages/over_mij.html',
             filename: 'over_mij.html'
         }),
         new HtmlWebpackPlugin({
             title: 'SdG - Sales',
-            favicon: paths.src + '/images/favicon.png',
             template: paths.src + '/pages/sales.html',
             filename: 'sales.html'
         }),
         new HtmlWebpackPlugin({
             title: 'SdG - Projecten',
-            favicon: paths.src + '/images/favicon.png',
             template: paths.src + '/pages/projecten.html',
             filename: 'projecten.html'
         }),
         new HtmlWebpackPlugin({
             title: 'SdG - Extra',
-            favicon: paths.src + '/images/favicon.png',
             template: paths.src + '/pages/extra.html',
             filename: 'extra.html'
         }),
