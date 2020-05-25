@@ -89,4 +89,15 @@
     .navlink-item { margin: 15px }
     .navlink-text { display: none }
     .navlink-link img { width: 35px }
+    #header-logo { width: 60vw; }
+    #body-header { 
+        display:block;
+        #body-header--social-navlinks ul {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #body-header--tagline {
+            justify-content: center;
+        }
+     }
 }
