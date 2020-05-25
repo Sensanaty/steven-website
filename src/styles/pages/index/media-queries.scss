@@ -32,6 +32,49 @@
     .content-text h2 { font-size: calc(13px + 1vmin) }
 }
 
+@media screen and (max-width: 1165px) {
+    //#body-content--about { display: none }
+    #body-content--about { max-width: 43% }
+    #body-content--navlinks {
+        grid-template-areas:
+                ".   .   .   .   .   .   .   .   ."
+                ".   .   .   .   .   .   .   .   ."
+                ".   .   .   .   .   .   . extra ."
+                ".   .   .   .   .   .   . extra ."
+                ".   .   .   .   . sales . extra ."
+                ".   .   .   .   . sales . extra ."
+                ".   .   . coops . sales . extra ."
+                ". about . coops . sales . extra ."
+                ". about . coops . sales . extra ."
+                ". about . coops . sales . extra .";
+    }
+}
+
+@media screen and (max-width: 1092px) {
+    //#header-logo { width: 40vw }
+    .header-navigation--box { font-size: calc(12px)}
+    .navlink-text { display: none }
+}
+
+@media screen and (max-width: 1085px) {
+    #body-content--about { padding: 10px }
+}
+
+@media screen and (max-width: 1010px) {
+    .content-mugshot-container { padding: 5% 5% 0 5% }
+}
+
+@media screen and (max-width: 970px) {
+    #body-content--about { display: none }
+    .content-navbox a { font-size: calc(13px + 1vmin) }
+
+    ul {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    a img { width: 40px }
+}
+
 // Adjust the size of the link divs on shorter screens so that the spacing between the 'graph' and about div are nice
 @media screen and (max-height: 805px) {
     #body-content--navlinks {
@@ -46,6 +89,27 @@
                 ". about . coops . sales . extra ."
                 ". about . coops . sales . extra ."
                 ". about . coops . sales . extra .";
+    }
+}
+
+@media screen and (max-width: 712px) {
+    #body-header { padding: 1rem }
+    #header-logo { margin: 0 }
+}
+
+@media screen and (max-width: 683px) {
+    #body-content--navlinks {
+        grid-template: repeat(9, 1fr)/ repeat(9, 1fr);
+        grid-template-areas:
+                ".     .     .     .     .     .      .     .     .  "
+                ".     .     .     .     .   about  about about about"
+                ".     .     .     .     .     .     .     .     .   "
+                ".     .     .     .   coops coops coops coops coops "
+                ".     .     .     .     .     .      .     .     .  "
+                ".     .     .   sales sales sales sales sales sales "
+                ".     .     .     .     .     .      .     .     .  "
+                ".     .   extra extra extra extra extra extra extra "
+                ".     .     .     .     .     .      .     .     .  ";
     }
 }
 
