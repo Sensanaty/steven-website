@@ -1,8 +1,22 @@
 # Steven de Graaf's Portfolio
 
-This is the personal portfolio website of Steven de Graaf. You can view the live site at [REPLACE_WITH_URL].
+This is the personal portfolio website of Steven de Graaf. You can view the live site at [stevendegraaf.com](https://stevendegraaf.com).
 
-See current Prototype version on [Figma](https://www.figma.com/file/UltAB8QCPpig4RPXhLKA30/Steven-s-Website).
+## Specifications
+
+All source files files are located in the `src/` directory. The various pages of the site, located under `src/pages/` are generated through HTML templates using `HtmlWebpackPlugin`. All images and similar assets are imported in `src/index.js`, and will then be included in the build process. The CSS is compiled from SCSS located under `src/styles`.
+
+Running the build command locally will generate an optimized version of the website, however this directory is ignored by Git.
+
+The website utilizes Webpack 4, with the [below](#stack) specified modules and plugins for it.
+
+## Development
+
+To start working on the site, clone it and run `yarn install` to install dependencies. Run `yarn start` to run the Webpack webserver on port `8080`, which features module hotswaps and live browser reloads.
+
+`yarn build` will build the source files and put them in the `dist/` folder, which is ignored by Git.
+
+The website is hosted on Netlify, and it monitors the `production` branch. *Any* changes to the production branch will make Netlify run the `yarn build` command automatically, so the optimum workflow is to work on feature branches, merge them into `master`, and then once the changes are finalized to push them onto `production`. Netlify will handle the rest and it usually doesn't take more than a few minutes for the live site to get updated with the new changes.
 
 ## Stack
 
@@ -31,6 +45,7 @@ See current Prototype version on [Figma](https://www.figma.com/file/UltAB8QCPpig
     - `eslint-loader`
     - `file-loader`
     - `url-loader`
+    - `raw-loader`
     
 - *Plugins*
     - `clean-webpack-plugin`
@@ -39,15 +54,3 @@ See current Prototype version on [Figma](https://www.figma.com/file/UltAB8QCPpig
     - `mini-css-extract-plugin`
     - `optimize-css-assets-webpack-plugin`
     - `terser-webpack-plugin`
-
-## Specifications
-
-All source files are located in the `src/` directory. Production files go under the `dist/` once the build process is completed, and the master is pushed onto [Netlify](https://www.netlify.com) automaticatly. Avoid updating the master branch unless changes are complete, because the branch is being monitored and auto-pushed to production.
-
-The website uses Webpack 4 during production, with the [above](#stack) specified modules and plugins for it.
-
-## Development
-
-To start working on the site, clone it and run `yarn install` to install dependencies. Run `yarn start` to run the Webpack webserver, which features Module hotswaps and Live browser reloads. Create a feature branch, and only merge branches into `master` if the changes are definite, as the `master` branch is monitored and auto-pushed to production.
-
-Netlify uses the `yarn build` command to build from source, and these files go into the `dist/` directory, which is `.gitignore`'d. You may also run `yarn build` to see the production build locally, but these are untracked by Git.
