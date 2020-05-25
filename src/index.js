@@ -6,6 +6,15 @@ import './images/phone-icon.svg';
 import './images/logo.svg';
 import './images/person.jpg';
 import './images/person.webp';
+import './images/favicon/android-chrome-512x512.png';
+import './images/favicon/android-chrome-192x192.png';
+import './images/favicon/apple-touch-icon.png';
+import './images/favicon/browserconfig.xml';
+import './images/favicon/favicon.ico';
+import './images/favicon/favicon-32x32.png';
+import './images/favicon/favicon-16x16.png';
+import './images/favicon/mstile-150x150.png';
+import './images/favicon/safari-pinned-tab.svg';
 
 /**
  * Check the current relative URL of the page, and add a class, "current-page" to the header element depending on which page the user is currently on.
