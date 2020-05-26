@@ -1,0 +1,21 @@
+.project-text-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .texts {
+        margin-bottom: 5%;
+        background: #fdfdfd;
+        width: 80%;
+        display: flex;
+        flex-flow: row wrap;
+        padding: 40px;
+
+        p {
+            font-size: calc(20px + 1vmin);
+            margin-top: 2%;
+            line-height: 1.2;
+        }
+    }
+}

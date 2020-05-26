@@ -24,28 +24,17 @@ import './images/favicon/safari-pinned-tab.svg';
 function changeHighlight() {
     // Get the relative URL of the page eg: '/about.html'
     const location = window.location.pathname+window.location.search;
-    switch (location) {
-        case "/over_mij.html":
-        case "/over_mij":
-            document.getElementById('about-header-link').classList.add("current-page");
-            break;
-        case "/projecten.html":
-        case "/projecten":
-            document.getElementById('coops-header-link').classList.add("current-page");
-            break;
-        case "/sales.html":
-        case "/sales":
-            document.getElementById('sales-header-link').classList.add("current-page");
-            break;
-        case "/extra.html":
-        case "/extra":
-            document.getElementById('extras-header-link').classList.add("current-page");
-            break;
-        default:
-            break;
+    if (location.match(/index?(.html)/)) {
+        return;
+    } else if (location.match(/over_mij?(.html)/)) {
+        document.getElementById('about-header-link').classList.add('current-page');
+    } else if (location.match(/projecten?(.html)/)) {
+        document.getElementById('coops-header-link').classList.add('current-page');
+    } else if (location.match(/sales?(.html)/)) {
+        document.getElementById('sales-header-link').classList.add('current-page');
+    } else {
+        document.getElementById('extras-header-link').classList.add('current-page');
     }
-    return null;
 }
 
-
-document.onload = changeHighlight();
+document.addEventListener('DOMContentLoaded', () => { changeHighlight() });
