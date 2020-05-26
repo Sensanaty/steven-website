@@ -27,13 +27,13 @@ function changeHighlight() {
     
     if (/index?(.html)/.test(location)) {
         return;
-    } else if (/over_mij?(.html)/.test(location)) {
+    } else if (/over_mij(.html)?/.test(location)) {
         document.getElementById('about-header-link').classList.add('current-page');
-    } else if (/projecten?(.html)/.test(location)) {
+    } else if (/projecten(.html)?/.test(location)) {
         document.getElementById('coops-header-link').classList.add('current-page');
-    } else if (/sales?(.html)/.test(location)) {
+    } else if (/sales(.html)?/.test(location)) {
         document.getElementById('sales-header-link').classList.add('current-page');
-    } else if (/extra?(.html)/.test(location)) {
+    } else if (/extra(.html)?/.test(location)) {
         document.getElementById('extras-header-link').classList.add('current-page');
     }
 }
