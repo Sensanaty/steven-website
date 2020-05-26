@@ -1,0 +1,34 @@
+.extra-text-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .texts {
+        margin-bottom: 5%;
+        background: #fdfdfd;
+        width: 80%;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+
+        h2 {
+            text-decoration: underline solid $background-highlight;
+            padding: 10px;
+            margin: 10px 0 5px 0;
+        }
+
+        p {
+            padding: 10px;
+            width: 65%;
+            font-size: 17px;
+        }
+
+        :first-child {
+            width: 100%;
+            font-size: calc(13px + 1vmin);
+        }
+    }
+}
