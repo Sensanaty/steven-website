@@ -24,15 +24,16 @@ import './images/favicon/safari-pinned-tab.svg';
 function changeHighlight() {
     // Get the relative URL of the page eg: '/about.html'
     const location = window.location.pathname+window.location.search;
-    if (location.match(/index?(.html)/)) {
+    
+    if (/index?(.html)/.test(location)) {
         return;
-    } else if (location.match(/over_mij?(.html)/)) {
+    } else if (/over_mij?(.html)/.test(location)) {
         document.getElementById('about-header-link').classList.add('current-page');
-    } else if (location.match(/projecten?(.html)/)) {
+    } else if (/projecten?(.html)/.test(location)) {
         document.getElementById('coops-header-link').classList.add('current-page');
-    } else if (location.match(/sales?(.html)/)) {
+    } else if (/sales?(.html)/.test(location)) {
         document.getElementById('sales-header-link').classList.add('current-page');
-    } else if (location.match(/extra?(.html)/)) {
+    } else if (/extra?(.html)/.test(location)) {
         document.getElementById('extras-header-link').classList.add('current-page');
     }
 }
