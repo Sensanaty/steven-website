@@ -65,13 +65,13 @@
         ".   .   .   .   .   .   .   .   ."
         ".   .   .   .   .   .   . extra ."
         ".   .   .   .   .   .   . extra ."
-        ".   .   .   .   . sales . extra ."
-        ".   .   .   .   . sales . extra ."
-        ".   .   . coops . sales . extra ."
-        ". about . coops . sales . extra ."
-        ". about . coops . sales . extra ."
-        ". about . coops . sales . extra ."
-        ". about . coops . sales . extra .";
+        ".   .   .   .   . coops . extra ."
+        ".   .   .   .   . coops . extra ."
+        ".   .   . sales . coops . extra ."
+        ". about . sales . coops . extra ."
+        ". about . sales . coops . extra ."
+        ". about . sales . coops . extra ."
+        ". about . sales . coops . extra .";
 
         #about-box { grid-area: about };
         #coops-box { grid-area: coops };
