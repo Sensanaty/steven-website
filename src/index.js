@@ -32,7 +32,7 @@ function changeHighlight() {
         document.getElementById('coops-header-link').classList.add('current-page');
     } else if (location.match(/sales?(.html)/)) {
         document.getElementById('sales-header-link').classList.add('current-page');
-    } else {
+    } else if (location.match(/extra?(.html)/)) {
         document.getElementById('extras-header-link').classList.add('current-page');
     }
 }
