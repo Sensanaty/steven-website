@@ -32,8 +32,6 @@
     }
 }
 
-
-
 .company-section:nth-child(even) {
     background: $background-highlight;
     grid-template: 0.4fr 1.6fr 0.4fr / 0.3fr 1.7fr;
@@ -58,3 +56,5 @@
         }
     }
 }
+
+@import 'media-queries';

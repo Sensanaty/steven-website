@@ -1,0 +1,18 @@
+@media screen and (max-width: 1338px) {
+    .project-text-wrapper { margin-top: 5% }
+}
+
+@media screen and (max-width: 768px) {
+    p { font-size: calc(12px + 1vmin) !important }
+}
+
+@media screen and (max-width: 650px) {
+    .project-text-wrapper .texts {
+        padding: 40px 20px;
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    p { font-size: 15px !important;}
+}

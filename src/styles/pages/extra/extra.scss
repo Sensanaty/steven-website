@@ -22,13 +22,16 @@
 
         p {
             padding: 10px;
-            width: 65%;
+            width: 75%;
             font-size: 17px;
         }
 
         :first-child {
             width: 100%;
             font-size: calc(13px + 1vmin);
+            margin-bottom: 2%;
         }
     }
 }
+
+@import 'media-queries';
