@@ -121,18 +121,18 @@
     }
 }
 
-@media screen and (max-height: 655px) {
-    #body-content--navlinks {
-        grid-template-areas:
-                ".   .   .   .   .   .   .   .   ."
-                ".   .   .   .   .   .   .   .   ."
-                ".   .   .   .   .   .   .   .   ."
-                ".   .   .   .   .   .   . extra ."
-                ".   .   .   .   .   .   . extra ."
-                ".   .   .   .   . coops . extra ."
-                ".   .   .   .   . coops . extra ."
-                ".   .   . sales . coops . extra ."
-                ". about . sales . coops . extra ."
-                ". about . sales . coops . extra .";
-    }
-}
+//@media screen and (max-height: 655px) {
+//    #body-content--navlinks {
+//        grid-template: repeat(9, 1fr)/ repeat(9, 1fr);
+//        grid-template-areas:
+//                ".     .     .     .     .     .      .     .     .  "
+//                ".     .     .     .     .   about  about about about"
+//                ".     .     .     .     .     .     .     .     .   "
+//                ".     .     .     .   sales sales sales sales sales "
+//                ".     .     .     .     .     .      .     .     .  "
+//                ".     .     .   coops coops coops coops coops coops "
+//                ".     .     .     .     .     .      .     .     .  "
+//                ".     .   extra extra extra extra extra extra extra "
+//                ".     .     .     .     .     .      .     .     .  ";
+//    }
+//}
