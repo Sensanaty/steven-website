@@ -1,33 +1,18 @@
-@media screen and (max-width: 767px) {
-    h1 { font-size: calc(25px + 1vmin) }
-    .company-section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-flow: column wrap;
-        text-align: center;
-        .company-title {
-            order: 1;
-            margin-bottom: 4%;
-            flex: 0 1 auto;
-        }
-        .company-video {
-            order: 2;
-            flex: 0 1 auto;
-            margin-bottom: 5rem;
-        }
-        .company-description {
-            order: 3;
-            flex: 0 1 auto;
-            margin-bottom: 5%;
-        }
+@media screen and (max-width: 1338px) {
+    .project-text-wrapper { margin-top: 5% }
+}
+
+@media screen and (max-width: 768px) {
+    p { font-size: calc(12px + 1vmin) !important }
+}
+
+@media screen and (max-width: 650px) {
+    .project-text-wrapper .texts {
+        padding: 40px 20px;
+        width: 85%;
     }
 }
 
-@media screen and (max-width: 537px) {
-    h1 { font-size: calc(20px + 1vmin) }
-}
-
-@media screen and (max-width: 430px) {
-    h1 { font-size: calc(18px + 1vmin) }
+@media screen and (max-width: 425px) {
+    p { font-size: 15px !important;}
 }
