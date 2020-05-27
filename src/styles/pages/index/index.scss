@@ -13,7 +13,7 @@
     display: grid;
     grid-template: 0.4fr / 1fr 3fr;
     grid-template-areas:
-            "mugshot head-and-subheader";
+            "head-and-subheader head-and-subheader";
     justify-content: center;
     align-items: center;
     box-shadow: inset 0 0 2px 0 #000000;
