@@ -1,0 +1,32 @@
+@media screen and (max-width: 570px) {
+    h2 { font-size: calc(12px + 1vmin)}
+    pre { font-size: 12px }
+}
+
+@media screen and (max-width: 501px) {
+    h2 { font-size: calc(10px + 1vmin)}
+    .content { padding: 20px }
+    pre { font-size: 10px }
+}
+
+@media screen and (max-width: 436px) {
+    pre { display: none }
+    h2 { margin-bottom: 10% }
+    p { font-size: 11px }
+    .container::after { right: -35px }
+
+    .left {
+        left: -98px;
+        .content { width: 91% }
+        &:before { left: 94% }
+    }
+    .right {
+        left: 56%;
+        .content {
+            width: 91%;
+            left: -19%
+        }
+        &:after { left: -31px }
+        &:before { left: 8px }
+    }
+}
