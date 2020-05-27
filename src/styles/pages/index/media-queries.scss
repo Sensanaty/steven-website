@@ -67,12 +67,20 @@
 @media screen and (max-width: 970px) {
     #body-content--about { display: none }
     .content-navbox a { font-size: calc(13px + 1vmin) }
+    a img { width: 30px }
+    #header-navigation .header-navigation--box { font-size: calc(10px + 1vmin) }
+    #header-logo { width: 25vw }
 
     ul {
         display: flex;
         flex-flow: row nowrap;
     }
-    a img { width: 40px }
+}
+
+@media screen and (max-width: 805px) {
+    #header-logo { margin: 0 1rem 0 0 }
+    #body-header { padding: 1rem }
+    #body-header #body-header--social-navlinks { justify-self: center }
 }
 
 // Adjust the size of the link divs on shorter screens so that the spacing between the 'graph' and about div are nice
@@ -93,7 +101,7 @@
 }
 
 @media screen and (max-width: 712px) {
-    #body-header { padding: 0 }
+    #body-header { padding: 0.5rem }
     #header-logo { margin: 0 }
 }
 

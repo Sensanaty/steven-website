@@ -15,7 +15,10 @@
         p {
             font-size: calc(20px + 1vmin);
             margin-top: 2%;
-            line-height: 1.2;
+            margin-bottom: 4%;
+            line-height: 1.4;
         }
     }
 }
+
+@import 'media-queries';
