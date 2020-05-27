@@ -4,6 +4,10 @@
 }
 
 @media screen and (max-width: 501px) {
+    .about-text-wrapper {
+        p { margin: 10px 20px}
+        p:last-child { margin: 10px 20px 30px 20px }
+    }
     h2 { font-size: calc(10px + 1vmin)}
     .content { padding: 20px }
     pre { font-size: 10px }
