@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8141745e-1d5a-4de4-9964-0a35fd2bb085/deploy-status)](https://app.netlify.com/sites/stevendegraaf/deploys)
+
 # Steven de Graaf's Portfolio
 
 This is the personal portfolio website of Steven de Graaf. You can view the live site at [stevendegraaf.com](https://stevendegraaf.com).
