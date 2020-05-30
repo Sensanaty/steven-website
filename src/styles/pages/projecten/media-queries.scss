@@ -2,7 +2,12 @@
     h1 { font-size: calc(25px + 1vmin) }
     #project-content-wrapper {
         .texts {
+            width: 90%;
             padding: 20px;
+            p {
+                width: 100%;
+                padding: 0;
+            }
         }
     }
 }
