@@ -14,6 +14,8 @@ html, body {
 
 body { overflow-y: scroll }
 
+#body-header--tagline img { pointer-events: none }
+
 // Page Partials
 @import "header";
 
