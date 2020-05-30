@@ -1,5 +1,5 @@
 @media screen and (max-width: 1338px) {
-    .project-text-wrapper { margin-top: 5% }
+    #sales-text-wrapper { margin-top: 3vh }
 }
 
 @media screen and (max-width: 768px) {
@@ -7,9 +7,11 @@
 }
 
 @media screen and (max-width: 650px) {
-    .project-text-wrapper .texts {
-        padding: 40px 20px;
-        width: 85%;
+    #sales-text-wrapper {
+        .texts {
+            padding: 40px 20px;
+            width: 85%;
+        }
     }
 }
 
