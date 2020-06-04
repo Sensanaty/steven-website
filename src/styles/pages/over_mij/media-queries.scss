@@ -21,10 +21,10 @@
     pre { display: none }
     h2 { margin-bottom: 3% }
     p { font-size: calc(9px + 1vmin) }
-    .container::after { right: -35px }
+    .container::after { right: -37px }
 
     .left {
-        left: -98px;
+        left: -94px;
         .content { width: 91% }
         &:before { left: 94% }
     }
