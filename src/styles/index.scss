@@ -21,7 +21,7 @@ body { overflow-y: scroll }
 
 // Pages
 @import 'pages/index/index';
-@import 'pages/about/about';
-@import 'pages/coop/coop';
-@import 'pages/projecten/projecten';
-@import 'pages/extra/extra';
+@import 'pages/over_mij/over_mij';
+
+// About, Projects and Sales page stylings
+@import 'pages/joint-pages';

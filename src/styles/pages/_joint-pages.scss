@@ -1,0 +1,40 @@
+.text-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: column wrap;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 3%;
+
+    .texts {
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+        width: 85%;
+
+        h1 {
+            font-size: calc(29px + 1vmin);
+            padding: 20px;
+        }
+
+        h2 {
+            font-weight: 900;
+            font-size: calc(13px + 1vmin);
+            text-decoration: underline $background-highlight;
+        }
+
+        p {
+            font-size: calc(9px + 1vmin);
+            margin: 15px 40px;
+
+            &:last-child { margin: 15px 40px 30px 40px}
+        }
+
+        .intro-paragraph { font-size: calc(11px + 1vmin)};
+    }
+}
+
+@import 'joint-pages-media-queries';
